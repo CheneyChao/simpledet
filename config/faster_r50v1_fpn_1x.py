@@ -13,7 +13,7 @@ def get_config(is_train):
         log_frequency = 10
         name = __name__.rsplit("/")[-1].rsplit(".")[-1]
         batch_image = 2 if is_train else 1
-        fp16 = False
+        fp16 = True
         loader_worker = 4
 
 
