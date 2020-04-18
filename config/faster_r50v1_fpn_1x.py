@@ -14,13 +14,13 @@ def get_config(is_train):
         name = __name__.rsplit("/")[-1].rsplit(".")[-1]
         batch_image = 2 if is_train else 1
         fp16 = False
-        loader_worker = 8
+        loader_worker = 4
 
 
     class KvstoreParam:
         kvstore     = "nccl"
         batch_image = General.batch_image
-        gpus        = [0, 1, 2, 3, 4, 5, 6, 7]
+        gpus        = [0]
         fp16        = General.fp16
 
 
